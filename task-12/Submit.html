@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 12</title>
+</head>
+<body>
+
+<input type="text" id="name" placeholder="Name">
+<input type="number" id="age" placeholder="Age">
+
+<button id="submit">Submit</button>
+
+<script>
+    document.getElementById("submit").addEventListener("click", function () {
+
+
+        let nameValue = document.getElementById("name").value;
+        let ageValue = document.getElementById("age").value;
+
+
+        let userData = {
+            name: nameValue,
+            age: ageValue,
+            timestamp: new Date().toLocaleString()
+        };
+
+
+        let { name, age, timestamp } = userData;
+
+
+        alert(
+            "Your name is: " + name +
+            "\nYour age is: " + age +
+            "\nTimestamp: " + timestamp
+        );
+    });
+</script>
+
+</body>
+</html>
