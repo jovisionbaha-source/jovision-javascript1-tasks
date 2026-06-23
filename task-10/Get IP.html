@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10</title>
+</head>
+<body>
+
+<button id="btn">Get IP</button>
+
+<script>
+    document.getElementById("btn").addEventListener("click", function () {
+
+        fetch("https://api.ipify.org/?format=text")
+            .then(response => response.text())
+            .then(ip => {
+                // replace button text with IP
+                document.getElementById("btn").textContent = ip;
+            })
+            .catch(error => {
+                console.log("Error:", error);
+            });
+
+    });
+</script>
+
+</body>
+</html>
